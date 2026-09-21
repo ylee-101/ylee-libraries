@@ -6,6 +6,9 @@ Run this project without network access on **macOS Apple Silicon**:
 ./build-offline.sh
 ```
 
+`./gradlew assembleDebug --offline --stacktrace` also routes through the same
+offline setup automatically.
+
 The script uses only project-local components:
 
 - `.gradle-offline/wrapper/dists`: Gradle 9.2.1 distribution

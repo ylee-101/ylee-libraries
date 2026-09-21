@@ -56,5 +56,6 @@ export ANDROID_SDK_ROOT="$sdk_dir"
 export ANDROID_HOME="$sdk_dir"
 export JAVA_HOME="$jdk_home"
 export PATH="$JAVA_HOME/bin:$PATH"
+export OFFLINE_BUNDLE_ACTIVE=1
 
 exec "$project_dir/gradlew" assembleDebug --offline --stacktrace "$@"
