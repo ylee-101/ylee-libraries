@@ -13,8 +13,9 @@ dependency metadata (`.pom` and, when published, `.module`). Metadata is
 required to resolve transitive dependencies and Gradle plugin markers; copying
 only JAR/AAR files is not sufficient.
 
-`settings.gradle.kts` always checks this repository first. During migration it
-can fall back to Google Maven, Maven Central, and the Gradle Plugin Portal.
+The offline build path sets `offlineMavenOnly=true`, so Gradle sees only this
+repository. Google Maven, Maven Central, and the Gradle Plugin Portal remain
+available only for deliberate online dependency refreshes.
 
 To verify that this directory is complete, run:
 
@@ -22,10 +23,8 @@ To verify that this directory is complete, run:
 ./build-from-local-maven.sh --no-daemon
 ```
 
-That command sets `offlineMavenOnly=true`, so Gradle sees only this directory
-and must also run with `--offline`. Once it succeeds in a clean clone with an
-empty Gradle user home, `.gradle-offline/caches/modules-2` can be removed from
-version control.
+That command must run with `--offline` and sees only this directory. The normal
+`./gradlew assembleDebug --offline --stacktrace` command uses the same mode.
 
 The Gradle distribution, JDK, and Android SDK are not Maven artifacts and
 remain in their existing project-local bundle directories.

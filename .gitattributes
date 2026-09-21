@@ -1,3 +1,4 @@
 # Gradle caches and Android SDK files must remain byte-for-byte identical.
 .gradle-offline/** -text
 .android-sdk/** -text
+offline-maven/** -text -whitespace
