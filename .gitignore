@@ -1,0 +1,32 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+/.idea/
+/.kotlin/
+
+# The tracked offline bundle keeps only immutable inputs. Gradle regenerates
+# these machine-local files on the first offline build.
+/.gradle-offline/daemon/
+/.gradle-offline/.tmp/
+/.gradle-offline/native/
+/.gradle-offline/notifications/
+/.gradle-offline/workers/
+/.gradle-offline/caches/9.2.1/
+/.gradle-offline/caches/jars-9/
+/.gradle-offline/caches/journal-1/
+/.gradle-offline/android/
+/.gradle-offline/kotlin-profile/
+/.gradle-offline/jdks/eclipse_adoptium-21-aarch64-os_x.2/jdk-21.0.7+6/Contents/Home/lib/modules
+/.gradle-offline/**/*.lock
+local.properties
