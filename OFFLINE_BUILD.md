@@ -11,7 +11,7 @@ The script uses only project-local components:
 - `.gradle-offline/wrapper/dists`: Gradle 9.2.1 distribution
 - `.gradle-offline/caches/modules-2`: resolved plugins and Maven/Google artifacts, with metadata
 - `.gradle-offline/jdks`: Eclipse Temurin Java 21 for macOS Apple Silicon
-- `.android-sdk/platforms/android-36`: Android API 36 platform
+- `.android-sdk/platforms/android-36.1`: Android API 36.1 platform required by `minorApiLevel = 1`
 - `.android-sdk/build-tools/36.0.0`: Android Build Tools 36.0.0
 
 Do not use `local.properties` for this workflow: it contains a machine-specific SDK path and remains ignored by Git.
